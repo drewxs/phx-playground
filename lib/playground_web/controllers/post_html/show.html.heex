@@ -1,0 +1,19 @@
+<.header>
+  Post <%= @post.id %>
+  <:subtitle>This is a post record from your database.</:subtitle>
+  <:actions>
+    <.link href={~p"/posts/#{@post}/edit"}>
+      <.button>Edit post</.button>
+    </.link>
+  </:actions>
+</.header>
+
+<.list>
+  <:item title="Id"><%= @post.id %></:item>
+  <:item title="Title"><%= @post.title %></:item>
+  <:item title="Body"><%= @post.body %></:item>
+  <:item title="Created at"><%= @post.created_at %></:item>
+  <:item title="Updated at"><%= @post.updated_at %></:item>
+</.list>
+
+<.back navigate={~p"/posts"}>Back to posts</.back>
